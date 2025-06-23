@@ -45,7 +45,7 @@ public class DecimalFormatMain {
 			//양수#,##0.00;음수0000000
 			//			↓
 			//양수#,##0.00;음수#,##0.00;
-			"▲0.00;▼"
+			"▲0.00;▼",
 		};
 		
 		for (String pp : ppArr) {
