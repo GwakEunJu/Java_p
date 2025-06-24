@@ -17,7 +17,8 @@ public class FunctionMain {
 		
 		// 매개변수 O , 리턴 X
 		Consumer<String> csm = (s)->System.out.println("컨서머 출력"+s+","+s.length());
-		csm.accept("아기상어");
+		// Consumer의 accept 메서드로 문자열 "아기상어"를 전달 → 출력: 문자열과 문자열 길이
+		csm.accept("아기상어"); // 여기서 accept는 전달된 값을 받아서 처리한다.
 
 		// 매개변수 X,  리턴 O 
 		Supplier<String> timeSup = ()-> new SimpleDateFormat("yyyy-MM-dd").format(new Date());
@@ -43,7 +44,7 @@ public class FunctionMain {
 		int [] arr = bf.apply(5,6);
 		System.out.println("arr : "+Arrays.toString(arr));
 		
-		//매개변수 2 갸, 리던 : boolean
+		//매개변수 2 개, 리던 : boolean
 		BiPredicate<Integer, Integer> bp = (a,b)-> a == b;
 		bb = bp.test(10, 20);
 		System.out.println(bb); 
